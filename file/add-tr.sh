@@ -107,7 +107,7 @@ echo -e "ISP            : ${ISP}" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Region         : ${CITY}" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Port TLS       : 443" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Port none TLS  : 80" | tee -a /etc/xraylog/log-trojan-$user.txt
-echo -e "Port gRPC      : ${tls}" | tee -a /etc/xraylog/log-trojan-$user.txt
+echo -e "Port gRPC      : 443" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Key            : ${uuid}" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Path           : /trojan-ws" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Service Name   : trojan-grpc" | tee -a /etc/xraylog/log-trojan-$user.txt
