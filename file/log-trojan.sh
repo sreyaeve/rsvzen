@@ -40,7 +40,8 @@ echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━
 grep -E "#! " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
 echo ""
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-read -rp "Input Username : " user                                                  CLIENT_EXISTS=$(grep -w $user /etc/xraylog/log-trojan-$user.txt | wc -l)    
+read -rp "Input Username : " user                                                  
+CLIENT_EXISTS=$(grep -w $user /etc/xraylog/log-trojan-$user.txt | wc -l)    
 if [[ ${CLIENT_EXISTS} == '0' ]]; then              
 clear                                                                        
 echo "Failure User Not Found"                                                   
