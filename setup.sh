@@ -119,7 +119,28 @@ echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
 sleep 0.5
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
 PERMISSION
+if [ -f /home/needupdate ]; then
 
+red "Your script need to update first !"
+
+exit 0
+
+elif [ "$res" = "Permission Accepted..." ]; then
+
+green "GOOD! Permission Accepted!"
+
+else
+
+red "Warning! Permission Denied!"
+
+
+rm setup.sh > /dev/null 2>&1
+
+sleep 0.5
+
+exit 0
+
+fi
 sleep 0.5
 mkdir /user >> /dev/null 2>&1
 apt install resolvconf network-manager dnsutils bind9 -y
