@@ -35,7 +35,7 @@ clear
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;36;44;1m          Log Create Vmess Account          \E[0m"
 echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m"
-echo -e " ${YB}User       Expired${NC}  "
+echo -e " ${YB}User          Expired${NC}  "
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 grep -E "### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
 echo ""
