@@ -258,7 +258,7 @@ wget -q -O /etc/issue.net "https://raw.githubusercontent.com/sreyaeve/rsvzen/mai
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
-cat> /etc/issue.net << END
+
 
 
 #install bbr dan optimasi kernel
