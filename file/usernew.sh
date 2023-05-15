@@ -88,11 +88,11 @@ echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━
 echo -e "IP          : $IP" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Host        : $domen" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "ISP         : $ISP" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "OpenSSH     : $opensh" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "Dropbear    : $db" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "SSH WS      : $portsshws" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "SSH SSL WS  : $wsssl" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "SSL/TLS     :$ssl" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "OpenSSH     : 22" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "Dropbear    : 109, 69, 143" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "SSH WS      : 80" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "SSH SSL WS  : 443" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "SSL/TLS     : 222, 777" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "UDPGW       : 7100-7900" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-ssh-$Login.txt
@@ -107,11 +107,11 @@ echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━
 echo -e "IP          : $IP" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Host        : $domen" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "ISP         : $ISP" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "OpenSSH     : $opensh" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "Dropbear    : $db" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "SSH WS      : $portsshws" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "SSH SSL WS  : $wsssl" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "SSL/TLS     :$ssl" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "OpenSSH     : 22" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "Dropbear    : 109, 69, 143" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "SSH WS      : 80" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "SSH SSL WS  : 443" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "SSL/TLS     : 222, 777" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "UDPGW       : 7100-7900" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-ssh-$Login.txt
