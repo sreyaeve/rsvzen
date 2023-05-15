@@ -36,7 +36,8 @@ done < /etc/passwd
 echo ""
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
-read -rp "Input Username : " user                                                  CLIENT_EXISTS=$(grep -w $user /etc/xraylog/log-ssh-$user.txt | wc -l)    
+read -rp "Input Username : " user                                                  
+CLIENT_EXISTS=$(grep -w $user /etc/xraylog/log-ssh-$user.txt | wc -l)    
 if [[ ${CLIENT_EXISTS} == '0' ]]; then              
 clear                                                                        
 echo "Failure User Not Found"                                                   
