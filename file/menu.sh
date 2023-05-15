@@ -126,6 +126,17 @@ uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 
 #STATUS RUNNING
+cek=$(service ssh status | grep active | cut -d ' ' -f5)
+
+if [ "$cek" = "active" ]; then
+
+stat=-f5
+
+else
+
+stat=-f7
+
+fi
 ssh=$(service ssh status | grep active | cut -d ' ' $stat)
 if [ "$ssh" = "active" ]; then
 xssh="${green}ON ${NC}"
@@ -148,41 +159,42 @@ clear
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;36;44;1m             System Information             \E[0m"
 echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m"
-echo -e "\e[32m ISP           \e[0m:  $ISP"	
-echo -e "\e[32m IP VPS        \e[0m:  $IPVPS"
-echo -e "\e[32m Domain        \e[0m:  $domain"	
-echo -e "\e[32m Region        \e[0m:  $WKT"	
-echo -e "\e[32m Time          \e[0m:  $DATE2"	
-echo -e "\e[32m RAM Usage     \e[0m:  $uram MB | $tram MB"	
-echo -e "\e[32m Bandwidth     \e[0m:  \e[32m$todayd\e[0m \e[32m$today_v\e[0m (Daily) \e[32m$month\e[0m \e[32m$month_v\e[0m (Monthly)"
+echo -e "\e[32m ISP         \e[0m:  $ISP"	
+echo -e "\e[32m IP VPS      \e[0m:  $IPVPS"
+echo -e "\e[32m Domain      \e[0m:  $domain"	
+echo -e "\e[32m Region      \e[0m:  $WKT"	
+echo -e "\e[32m Time        \e[0m:  $DATE2"	
+echo -e "\e[32m RAM Usage   \e[0m:  $uram MB | $tram MB"	
+echo -e "\e[32m Bandwidth D \e[0m:  \e[32m$todayd\e[0m \e[32m$today_v\e[0m (Daily)"
+echo -e "\e[32m Bandwidth M \e[0m:  \e[32m$month\e[0m \e[32m$month_v\e[0m (Monthly)"
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;36;44;1m                Server Status               \E[0m"
 echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m"
-echo "┏━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓"
-echo "┃   SSH = $xssh  ┃  Nginx = $xnginx ┃   Xray = $xxray ┃"
-echo "┗━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━┛"
+echo -e "┏━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓"
+echo -e "┃   SSH = $xssh  ┃  Nginx = $xnginx ┃   Xray = $xxray ┃"
+echo -e "┗━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━┛"
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;36;44;1m                  VPS Menu                  \E[0m"
 echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m"
-echo "┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┓"
+echo -e "┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┓"
 echo -e "┃ [\e[36m 01 \e[0m] SSH Menu     ┃  [\e[36m 07 \e[0m] Running      ┃"
 echo -e "┃ [\e[36m 02 \e[0m] Vmess Menu   ┃  [\e[36m 08 \e[0m] Restart VPN  ┃"
 echo -e "┃ [\e[36m 03 \e[0m] Vless Menu   ┃  [\e[36m 09 \e[0m] Speedtest    ┃"
 echo -e "┃ [\e[36m 04 \e[0m] Trojan Menu  ┃  [\e[36m 10 \e[0m] Domain Menu  ┃"
 echo -e "┃ [\e[36m 05 \e[0m] Shadow Menu  ┃  [\e[36m 11 \e[0m] Backup Menu  ┃"
 echo -e "┃ [\e[36m 06 \e[0m] Banner SSH   ┃  [\e[36m 12 \e[0m] DNS Setting  ┃"
-echo "┣━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━━━━┫"
-echo "┃ [\e[36m 99 \e[0m] \e[31mReboot VPS\e[0m   ┃  [\e[36m 100 \e[0m] \e[32mSystem Live\e[0m ┃"
-echo "┗━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━━┛"
+echo -e "┣━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━━━━┫"
+echo -e "┃ [\e[36m 99 \e[0m] \e[31mReboot VPS\e[0m   ┃  [\e[36m 100 \e[0m] \e[32mSystem Live\e[0m ┃"
+echo -e "┗━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━━┛"
 echo -e   ""
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;36;44;1m             Member Information             \E[0m"
 echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m"
-echo "╒━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╕"
+echo -e "╒━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╕"
 echo -e " \e[32mClient Name     \e[0m: $Name"
 echo -e " \e[32mExpired         \e[0m: $Exp2 | $certificate Day Left"
 echo -e " \e[32mVersion         \e[0m: Websocket 1.0"
-echo "╘━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╛"
+echo -e "╘━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╛"
 echo -e   ""
 read -p " Select menu :  "  opt
 echo -e   ""
