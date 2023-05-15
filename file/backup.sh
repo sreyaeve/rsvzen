@@ -10,6 +10,39 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
+# Color Validation
+
+DF='\e[39m'
+
+Bold='\e[1m'
+
+Blink='\e[5m'
+
+yell='\e[33m'
+
+red='\e[31m'
+
+green='\e[32m'
+
+blue='\e[34m'
+
+PURPLE='\e[35m'
+
+cyan='\e[36m'
+
+Lred='\e[91m'
+
+Lgreen='\e[92m'
+
+Lyellow='\e[93m'
+
+NC='\e[0m'
+
+GREEN='\033[0;32m'
+
+ORANGE='\033[0;33m'
+
+LIGHT='\033[0;37m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
