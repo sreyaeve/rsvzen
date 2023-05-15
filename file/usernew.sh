@@ -38,6 +38,23 @@ NC='\e[0m'
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
+# Color
+
+RED='\033[0;31m'
+
+NC='\033[0m'
+
+GREEN='\033[0;32m'
+
+ORANGE='\033[0;33m'
+
+BLUE='\033[0;34m'
+
+PURPLE='\033[0;35m'
+
+CYAN='\033[0;36m'
+
+LIGHT='\033[0;37m'
 clear
 cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 if [ "$cekray" = "XRAY" ]; then
@@ -98,9 +115,11 @@ echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 else
-echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "            SSH Account               " | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+
+echo -e " \E[0;36;44;1m              SSH Account Detail            \E[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+
+echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Username    : $Login" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Password    : $Pass" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
