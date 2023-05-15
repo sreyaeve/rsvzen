@@ -330,7 +330,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV="Beta"
+serverV="Websocket V1"
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -343,7 +343,7 @@ fi
 curl -sS ifconfig.me > /etc/myipvps
 echo ""
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
-echo -e " \E[0;36;44;1m             Succesfully Installed          \E[0m"
+echo -e " \E[0;36;44;1m            Succesfully Installed           \E[0m"
 echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m"
 echo ""
 echo " SSH WEBSOCKET        Fully Automatic Script"
