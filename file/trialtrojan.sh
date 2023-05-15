@@ -1,5 +1,12 @@
 #!/bin/bash
-
+RED='\033[0;31m'
+NC='\033[0m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 
 echo "Checking VPS"
@@ -81,8 +88,8 @@ echo -e "Host/IP        : ${domain}" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "ISP            : ${ISP}" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Region         : ${CITY}" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Port TLS       : 443" | tee -a /etc/xraylog/log-trojan-$user.txt
-echo -e "Port none TLS  : 80" | tee -a /etc/xraylog/log-trojan-$user.txt
-echo -e "Port gRPC      : ${tls}" | tee -a /etc/xraylog/log-trojan-$user.txt
+echo -e "Port NTLS      : 80" | tee -a /etc/xraylog/log-trojan-$user.txt
+echo -e "Port gRPC      : 443" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Key            : ${uuid}" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Path           : /trojan-ws" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Service Name   : trojan-grpc" | tee -a /etc/xraylog/log-trojan-$user.txt
