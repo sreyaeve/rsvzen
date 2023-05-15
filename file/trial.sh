@@ -1,4 +1,19 @@
 #!/bin/bash
+RED='\033[0;31m'
+
+NC='\033[0m'
+
+GREEN='\033[0;32m'
+
+ORANGE='\033[0;33m'
+
+BLUE='\033[0;34m'
+
+PURPLE='\033[0;35m'
+
+CYAN='\033[0;36m'
+
+LIGHT='\033[0;37m'
 cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 if [ "$cekray" = "XRAY" ]; then
 domen=`cat /etc/xray/domain`
@@ -50,11 +65,11 @@ echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━
 echo -e "IP         : $IP"
 echo -e "Host       : $domen"
 echo -e "ISP        : $ISP"
-echo -e "OpenSSH    : $opensh"
-echo -e "Dropbear   : $db"
-echo -e "SSH WS     : $portsshws"
-echo -e "SSH SSL WS : $wsssl"
-echo -e "SSL/TLS    :$ssl"
+echo -e "OpenSSH    : 22"
+echo -e "Dropbear   : 109, 69, 143"
+echo -e "SSH WS     : 80"
+echo -e "SSH SSL WS : 443"
+echo -e "SSL/TLS    : 222, 777"
 echo -e "UDPGW      : 7100-7900"
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
@@ -70,11 +85,11 @@ echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━
 echo -e "IP         : $IP"
 echo -e "Host       : $domen"
 echo -e "ISP        : $ISP"
-echo -e "OpenSSH    : $opensh"
-echo -e "Dropbear   : $db"
-echo -e "SSH WS     : $portsshws"
-echo -e "SSH SSL WS : $wsssl"
-echo -e "SSL/TLS    :$ssl"
+echo -e "OpenSSH    : 22"
+echo -e "Dropbear   : 109, 69, 143"
+echo -e "SSH WS     : 80"
+echo -e "SSH SSL WS : 443"
+echo -e "SSL/TLS    : 222, 777"
 echo -e "UDPGW      : 7100-7900"
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
