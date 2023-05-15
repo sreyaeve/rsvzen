@@ -10,6 +10,9 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
+green() { echo -e "\\033[32;1m${*}\\033[0m"; }
+
+red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 # ==========================================
 # Getting
 clear
@@ -22,8 +25,8 @@ clear
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;36;44;1m                Backup Session              \E[0m"
 echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m"
-echo ""
-echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
+red "WARNING !!!"
+green "Processing backup data, Please Wait"
 rm -rf /root/backup
 mkdir /root/backup
 cp /etc/passwd backup/
@@ -35,6 +38,7 @@ cp -r /var/lib/zenhost/ backup/zenhost
 cp -r /etc/xray backup/xray
 cp -r /home/vps/public_html backup/public_html
 cp -r /etc/cron.d backup/cron.d
+cp -r /etc/xraylog backup/xraylog
 cd /root
 zip -r $IP-$date.zip backup > /dev/null 2>&1
 rclone copy /root/$IP-$date.zip dr:backup/
