@@ -78,23 +78,23 @@ rclone copy /root/$IP-$date.zip dr:backup/
 url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
-echo -e "Detail Backup"
-echo "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo "     IP VPS        : $IP"
-echo "     Domain        : $domain"
-echo "     Link Backup   : $link"
-echo "     Tanggal       : $date"
-echo "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Detail Backup
+${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
+     IP VPS        : $IP
+     Domain        : $domain
+     Link Backup   : $link
+     Tanggal       : $date
+${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 mail -s "Backup Data" $email
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 clear
-echo -e "Detail Backup"
-echo "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo "     IP VPS        : $IP"
-echo "     Domain        : $domain"
-echo "     Link Backup   : $link"
-echo "     Tanggal       : $date"
-echo "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Detail Backup
+${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
+     IP VPS        : $IP
+     Domain        : $domain
+     Link Backup   : $link
+     Tanggal       : $date
+${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo "Silahkan copy Link dan restore di VPS baru"
 echo "Terimakasih sudah menggunakan layanan ZenVPN"
