@@ -133,7 +133,7 @@ echo -e "ISP            : ${ISP}" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Region         : ${CITY}" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Port TLS       : 443" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Port none TLS  : 80" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "Port gRPC      : ${tls}" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "Port gRPC      : 443" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "id             : ${uuid}" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "alterId        : 0" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Security       : auto" | tee -a /etc/xraylog/log-vmess-$user.txt
