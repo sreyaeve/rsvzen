@@ -61,8 +61,9 @@ cp -r /root/backup/xray /etc/ &> /dev/null
 cp -r /root/backup/public_html /home/vps/ &> /dev/null
 cp -r /root/backup/crontab /etc/ &> /dev/null
 cp -r /root/backup/cron.d /etc/ &> /dev/null
+cp -r /root/backup/xraylog /etc/ &> /dev/null
 rm -rf /root/backup &> /dev/null
-echo -e "${CYAN}│${NC}  [ ${BLUE}INFO${NC} ] • Done... Successfully Pakbroo."
+echo -e "${CYAN}│${NC}  [ ${BLUE}INFO${NC} ] • Done... Successfully"
 sleep 1
 rm -f /root/backup/backup.zip &> /dev/null
 echo -e "${CYAN}└─────────────────────────────────────────────────┘${NC}" 
