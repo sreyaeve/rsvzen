@@ -300,7 +300,7 @@ wget -O renew "https://raw.githubusercontent.com/sreyaeve/rsvzen/main/file/renew
 wget -O hapus "https://raw.githubusercontent.com/sreyaeve/rsvzen/main/file/hapus.sh"
 wget -O cek "https://raw.githubusercontent.com/sreyaeve/rsvzen/main/file/cek.sh"
 wget -O member "https://raw.githubusercontent.com/sreyaeve/rsvzen/main/file/member.sh"
-wget -O delete "https://raw.githubusercontent.com/sreyaeve/rsvzen/main/file/delete.sh"
+wget -O dns "https://raw.githubusercontent.com/sreyaeve/rsvzen/main/file/dns.sh"
 wget -O autokill "https://raw.githubusercontent.com/sreyaeve/rsvzen/main/file/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/sreyaeve/rsvzen/main/file/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/sreyaeve/rsvzen/main/file/tendang.sh"
@@ -331,7 +331,7 @@ chmod +x renew
 chmod +x hapus
 chmod +x cek
 chmod +x member
-chmod +x delete
+chmod +x dns
 chmod +x autokill
 chmod +x ceklim
 chmod +x tendang
