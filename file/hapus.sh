@@ -40,6 +40,7 @@ read -p "Ketik Usernamenya : " Pengguna
 
 if getent passwd $Pengguna > /dev/null 2>&1; then
         userdel $Pengguna > /dev/null 2>&1
+        rm -rf /etc/xraylog/log-ssh-$pengguna.txt
         echo -e "User $Pengguna Berhasil Di Hapus Sayang."
 else
         echo -e "Failure: User $Pengguna Tidak Di Temukan."
