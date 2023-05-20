@@ -358,16 +358,16 @@ echo " All Port HTTP          : 80"
 echo ""
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
-echo "" | tee -a log-install.txt
+echo ""
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/backupinstaller.sh >/dev/null 2>&1
 rm /root/sshinstaller.sh >/dev/null 2>&1
 rm /root/xrayinstaller.sh >/dev/null 2>&1
 rm /root/websocketinstaller.sh >/dev/null 2>&1
 rm /root/toolsinstaller.sh >/dev/null 2>&1
-secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
-echo -e "
-"
+secs_to_human "$(($(date +%s) - ${start}))"
+echo -e ""
+
 echo -ne "[ ${yell}WARNING${NC} ] reboot now ? (y/n)? "
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
