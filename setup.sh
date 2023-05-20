@@ -326,7 +326,6 @@ fi
 if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
-history -c
 
 aureb=$(cat /home/re_otm)
 b=11
@@ -336,7 +335,8 @@ gg="PM"
 else
 gg="AM"
 fi
-curl -sS ifconfig.me > /etc/myipvps
+history -c
+url -sS ifconfig.me > /etc/myipvps
 clear
 echo ""
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
@@ -353,8 +353,7 @@ echo " All Port HTTPS         : 443"
 echo " All Port HTTP          : 80"
 echo ""
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo ""
-echo ""
+echo -e ""
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/backupinstaller.sh >/dev/null 2>&1
 rm /root/sshinstaller.sh >/dev/null 2>&1
