@@ -335,8 +335,7 @@ gg="PM"
 else
 gg="AM"
 fi
-history -c
-url -sS ifconfig.me > /etc/myipvps
+
 clear
 echo ""
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
