@@ -364,8 +364,7 @@ rm /root/sshinstaller.sh >/dev/null 2>&1
 rm /root/xrayinstaller.sh >/dev/null 2>&1
 rm /root/websocketinstaller.sh >/dev/null 2>&1
 rm /root/toolsinstaller.sh >/dev/null 2>&1
-secs_to_human "$(($(date +%s) - ${start}))"
-echo -e ""
+
 
 echo -ne "[ ${yell}WARNING${NC} ] reboot now ? (y/n)? "
 read answer
