@@ -336,6 +336,20 @@ else
 gg="AM"
 fi
 
+rm /root/setup.sh >/dev/null 2>&1
+
+rm /root/backupinstaller.sh >/dev/null 2>&1
+
+rm /root/sshinstaller.sh >/dev/null 2>&1
+
+rm /root/xrayinstaller.sh >/dev/null 2>&1
+
+rm /root/websocketinstaller.sh >/dev/null 2>&1
+
+rm /root/toolsinstaller.sh >/dev/null 2>&1
+
+
+
 clear
 echo ""
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
@@ -353,12 +367,6 @@ echo " All Port HTTP          : 80"
 echo ""
 echo -e "${CYAN} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
-rm /root/setup.sh >/dev/null 2>&1
-rm /root/backupinstaller.sh >/dev/null 2>&1
-rm /root/sshinstaller.sh >/dev/null 2>&1
-rm /root/xrayinstaller.sh >/dev/null 2>&1
-rm /root/websocketinstaller.sh >/dev/null 2>&1
-rm /root/toolsinstaller.sh >/dev/null 2>&1
 
 
 echo -ne "[ ${yell}WARNING${NC} ] reboot now ? (y/n)? "
