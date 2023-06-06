@@ -6,4 +6,3 @@ pkill -e m-vmess
 pkill -e m-vless
 pkill -e m-trojan
 echo "Done"
-menu
